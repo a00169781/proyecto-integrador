@@ -6,7 +6,7 @@ This document contains the prompts used to generate the Tree of Thoughts (ToT) p
 The whole idea of ToT is to generate partial solutions to a problem, evaluate them, select the most promising path and further develop it.
 This is done recursively until we reach a threshold or we only have a single path left.
 
-As a first step we use a Thought Generator to generate 5 different thoughts, each tought will be evaluated by a Thought Evaluator and a score will be assigned, if the score is above a threshold, the thought will be further developed using the Thought Futher Development prompt. Every time we generate a new thought, we will use the Thought Evaluator to assess the quality and decide if we should further develop it or not.
+As a first step we use a Thought Generator prompt to generate 5 different thoughts, each tought will be evaluated by a Thought Evaluator prompt and a score will be assigned, if the score is above a threshold, the thought will be further developed using the Thought Futher Development prompt. Every time we generate a new thought, we will use the Thought Evaluator prompt to assess the quality of the output and decide if we should further develop it or not.
 
 We will develope the branches 3 times, after that we select the best branch using the Branch Selector prompt and we pass the thoughts of the selected branch to the Final Answer prompt.
 
