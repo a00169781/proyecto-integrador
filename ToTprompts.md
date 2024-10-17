@@ -10,7 +10,15 @@ As a first step we use a Thought Generator to generate 5 different thoughts, eac
 
 We will develope the branches 3 times, after that we select the best branch using the Branch Selector prompt and we pass the thoughts of the selected branch to the Final Answer prompt.
 
-We decided to split the whole process into several prompts to keep the conversation focused and easy to debug
+We decided to split the whole process into these prompts to keep the conversation focused and easy to debug:
+
+- Thought Generator
+- Thought Evaluator
+- Thought Futher Development
+- Branch Selector
+- Final Answer
+
+The detailed description of each prompt is presented below.
 
 ***
 
