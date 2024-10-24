@@ -6,6 +6,8 @@ This document contains the prompts used to generate the Tree of Thoughts (ToT) p
 The whole idea of ToT is to generate partial solutions to a problem, evaluate them, select the most promising path and further develop it.
 This is done recursively until we reach a threshold or we only have a single path left.
 
+<img src="./tot_flow.png" alt="drawing" width="800"/>
+
 As a first step we use a Thought Generator prompt to generate 5 different thoughts, each tought will be evaluated by a Thought Evaluator prompt and a score will be assigned, if the score is above a threshold, the thought will be further developed using the Thought Futher Development prompt. Every time we generate a new thought, we will use the Thought Evaluator prompt to assess the quality of the output and decide if we should further develop it or not.
 
 We will develope the branches 3 times, after that we select the best branch using the Branch Selector prompt and we pass the thoughts of the selected branch to the Final Answer prompt.
@@ -19,6 +21,13 @@ We decided to split the whole process into these prompts to keep the conversatio
 - Final Answer
 
 The detailed description of each prompt is presented below.
+
+We tested this prompts with the full set of questions, developing the branches 3 times and selecting the best branch.
+The results are encouraging, the accuracy was increased from 64% to 77%.
+
+<a href="./output/tot_full_run.json">Json file with the full run</a>
+
+
 
 ***
 
