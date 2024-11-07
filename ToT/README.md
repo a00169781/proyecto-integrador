@@ -8,7 +8,7 @@ This is done recursively until we reach a threshold or we only have a single pat
 
 <img src="./tot_flow.png" alt="drawing" width="800"/>
 
-As a first step we use a Thought Generator prompt to generate 5 different thoughts, each tought will be evaluated by a Thought Evaluator prompt and a score will be assigned, if the score is above a threshold, the thought will be further developed using the Thought Futher Development prompt. Every time we generate a new thought, we will use the Thought Evaluator prompt to assess the quality of the output and decide if we should further develop it or not.
+As a first step we use a Thought Generator prompt to generate 5 different thoughts, each tought will be evaluated by a Thought Evaluator prompt and a score will be assigned, if the score is above a threshold, the thought will be further developed using the Further Thought Development prompt. Every time we generate a new thought, we will use the Thought Evaluator prompt to assess the quality of the output and decide if we should further develop it or not.
 
 We will develope the branches 3 times, after that we select the best branch using the Branch Selector prompt and we pass the thoughts of the selected branch to the Final Answer prompt.
 
@@ -16,7 +16,7 @@ We decided to split the whole process into these prompts to keep the conversatio
 
 - Thought Generator
 - Thought Evaluator
-- Thought Futher Development
+- Further Thought Development
 - Branch Selector
 - Final Answer
 
@@ -90,7 +90,7 @@ Just present the score of the thought evaluation, do not answer the question or 
      - **0.8 to 1.0:** The thought is accurate, complete, and well-reasoned.
 ```
 
-### ToT: Thought Futher Development prompt
+### ToT: Further Thought Development prompt
 
 This prompt is used to further develop a thought. It will generate a new thought based on the previous thoughts.
 
